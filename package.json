@@ -1,0 +1,25 @@
+{
+  "name": "surplus",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "browsersync": "browser-sync start --proxy localhost:3300 --files '**/*.html, **/*.css, **/*.js' --port 3030",
+    "nodemon": "nodemon --experimental-sqlite index.js",
+    "dev_c": "concurrently --kill-others 'npm run nodemon' 'npm run browsersync'",
+    "dev": "npm-run-all -p nodemon browsersync"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "express": "^4.21.1",
+    "uuid": "^11.0.0"
+  },
+  "devDependencies": {
+    "browser-sync": "^3.0.3",
+    "nodemon": "^3.1.7",
+    "npm-run-all": "^4.1.5"
+  }
+}
